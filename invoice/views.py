@@ -14,16 +14,13 @@ stripe.api_key = 'ebb843f49b1ec203be76ad667d9c30cae9865acd'
 
 from flask import Flask, jsonify, request
 
-
-
-
-
 def home(request):
     title = "Welcome..! Login to Manage Invoices"
     context = {
         "title": title,
     }
     return render(request, "base.html", context)
+
 @login_required
 def add_invoice(request):
     form = InvoiceForm(request.POST or None)
@@ -37,6 +34,7 @@ def add_invoice(request):
         "total_invoices": total_invoices,
     }
     return render(request, "entry.html", context)
+
 @login_required
 def list_invoice(request):
     title = 'Search Invoices'
@@ -58,6 +56,7 @@ def list_invoice(request):
             "queryset": queryset,
         }
     return render(request,"list_invoice.html", context)
+
 @login_required
 def update_invoice(request,pk):
     queryset = Invoice.objects.get(id=pk)
@@ -71,6 +70,7 @@ def update_invoice(request,pk):
         "form":form
     }
     return render(request, 'entry.html', context)
+
 @login_required
 def delete_invoice(request, pk):
     queryset = Invoice.objects.get(id=pk)
@@ -78,7 +78,6 @@ def delete_invoice(request, pk):
         queryset.delete()
         return redirect('/list_invoice')
     return render(request, 'delete_invoice.html')
-
 
 stripe_urls = {
         40000: "https://buy.stripe.com/test_5kA4hfg0u9gbeNGbIK",
@@ -89,7 +88,6 @@ stripe_urls = {
         150000: "https://buy.stripe.com/test_4gw8xv01wcsncFy5kl",
 
     }
-
 
 def Shorten_url(request,pk):
     Access_Token = "ebb843f49b1ec203be76ad667d9c30cae9865acd"
@@ -103,10 +101,6 @@ def Shorten_url(request,pk):
         "shorten_url": shorten_url.get('url'),
     }
     return render(request, 'link.html',context)
-
-
-
-
 
 app = Flask(__name__)
 @app.route('/pstatus', methods=['POST'])
