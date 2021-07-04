@@ -1,0 +1,37 @@
+body {
+    background-color:#e7e7e7!important
+    text-align:center;
+}
+.myClass{
+    text-align:center;
+    border-style:solid;
+}
+.myForm{
+    margin:30px;
+}
+.table{
+    font-size: 13px;
+    text-align: center;
+    width:95%;
+    margin:auto;
+}
+.table tr:nth-child(odd){
+    background:#48C8EC
+}
+.table tr:nth-child(even){
+    background:#36DCCC
+}
+.success{
+    list-style: none;
+    background-color: #2e6da4
+    color: white;
+    box-shadow: 10px 10px 10px #e61c66;
+    text-align: center;
+}
+.main-container{
+    width:85%;
+    margin:auto;
+}
+.mymenu-bar{
+    text-align:center;
+}

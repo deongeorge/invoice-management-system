@@ -1,0 +1,48 @@
+{% load static %}
+{% load crispy_forms_tags %}
+{% include 'nav.html' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <link href="{% static 'css/stylesheet.css' %}" rel="stylesheet">
+    <link href="{% static 'js/jquery-ui-1.12.1/jquery-ui.min.css' %}" rel="stylesheet">
+    <link href="{% static 'js/jquery-ui-1.12.1/jquery-ui.structure.min.css' %}" rel="stylesheet">
+    <link href="{% static 'js/jquery-ui-1.12.1/jquery-ui.theme.min.css' %}" rel="stylesheet">
+
+    <script src="{% static 'js/jquery-3.6.0.min.js' %}"></script>
+    <script src="{% static 'js/jquery-ui-1.12.1/jquery-ui.js' %}" rel="stylesheet"></script>
+    <script src="{% static 'js/myjs.js' %}"></script>
+</head>
+<body>
+{% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+            <li {% if message.tags %} class="{{ message.tags}}" {% endif %}>{{message}}</li>
+        {% endfor %}
+    </ul>
+{% endif %}
+<div class="myForm">
+    <form method="POST" action=''>{% csrf_token %}
+        <div class="col-sm-6">
+            <div class="form-row">
+                {{form.Invoice_number|as_crispy_field}}
+            </div>
+            <div class="form-row">
+                {{form.Client_name|as_crispy_field}}
+                {{form.Client_email|as_crispy_field}}
+            </div>
+            <div class="form-row">
+                {{form.Project_name|as_crispy_field}}
+                {{form.Amount|as_crispy_field}}
+            </div><br>
+            <input type="submit" class="btn btn-primary" value="Submit">
+        </div>
+    </form>
+    <div class="recent">
+        <span class="">Recent Invoices</span>
+        <span class="">{{total_invoices}}</span>
+    </div>
+</body>
+</html>

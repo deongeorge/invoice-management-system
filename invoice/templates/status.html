@@ -1,0 +1,16 @@
+{% load static %}
+{% include 'nav.html' %}
+{% load crispy_forms_tags %}
+<html lang="en">
+<head>
+    <title>Payment Status</title>
+    <meta charset="UTF-8">
+    <title class="tit">Invoices List</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+
+    <link href="{% static 'css/stylesheet.css' %}" rel="stylesheet">
+</head>
+<body><br><br>
+<center><h2>{{pstatus}}</h2></center>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{% load static %}
+{% load crispy_forms_tags %}
+{% include 'nav.html' %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Payment Link</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <link href="{% static 'css/stylesheet.css' %}" rel="stylesheet">
+</head>
+<body><br><br>
+<center><h2>Payment link  :<a href="{{ shorten_url }}">{{ shorten_url }}</a></h2></center>
+
+</body>
+</html>
+
