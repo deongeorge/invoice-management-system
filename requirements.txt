@@ -3,4 +3,4 @@ djangorestframework
 bitly_api
 flask
 stripe
-
+django-crispy-forms
