@@ -15,6 +15,7 @@ $ django
 $ djangorestframework
 $ bitly_api
 $ stripe
+$ flask
 ```
 Note: You can use any tool such as Pycharm, Visual Studio code, etc...
 ***
