@@ -17,7 +17,7 @@ $ bitly_api
 $ stripe
 $ flask
 ```
-Note: You can use any tool such as Pycharm, Visual Studio code, etc...
+Note: You can use any IDE such as Pycharm, Visual Studio code, Sublime etc...
 ***
 # Screenshots
 ![](images/Screenshot11.png)
