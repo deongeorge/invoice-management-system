@@ -16,6 +16,7 @@ $ djangorestframework
 $ bitly_api
 $ stripe
 $ flask
+$ django-crispy-forms
 ```
 Note: You can use any IDE such as Pycharm, Visual Studio code, Sublime etc...
 ***
