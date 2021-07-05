@@ -9,7 +9,7 @@
 https://user-images.githubusercontent.com/47422302/124398723-d1a19e80-dd34-11eb-85ec-f1c7a75902fa.mp4
 ***
 # Requirements
-***
+*
 To work this application first you need to create a virtual environment.You can use pip instaler to install the required packages.
 ```
 $ django
